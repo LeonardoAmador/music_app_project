@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +14,7 @@
     <!-- JAVASCRIPT -->
     <script src="js/script.js" defer></script>
 </head>
+
 <body>
     <header class="header">
         <img src="images/logo" alt="music-log" class="logoMusicApp">
@@ -28,6 +30,7 @@
         <span class="material-symbols-outlined">search</span>
     </header>
     <section class="mainContainer">
+        <button class="btnActionDialog">X</button>
         <div class="referenceCard">
             <h1 class="title">Top 50 Hits from our Music app</h1>
             <div class="interactionsCard">
@@ -51,6 +54,26 @@
                 </figure>
             </div>
         </div>
+        <section class="formMain">
+            <div class="form">
+                <button class="closeDialog">X</button>
+                <h1>Upload your music</h1>
+                <form method="post">
+                    <h4>Music Name</h4>
+                    <input type="Text" id="musicName" placeholder="Ex: Dj Moist" />
+                    <h4>Quick Review</h4>
+                    <input type="Text" id="musicName" placeholder="Ex: A song dedicated to my friend ..." />
+                    <h3>{Music input goes here}</h3>
+                    <h4>Add lyrics</h4>
+                    <input type="Text" id="formInputSub" placeholder="Ex: A song dedicated to my friend ..."
+                        maxlength="100" />
+                    <a style="cursor: pointer;background: red;color:aliceblue;padding: 10px;" id="LyricButton">Add
+                        subtitule</a>
+                    <div id="subs"></div>
+                </form>
+            </div>
+        </section>
     </section>
 </body>
+
 </html>
