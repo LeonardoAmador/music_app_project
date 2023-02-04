@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Fuck Music</title>
     <!-- STYLES -->
     <link rel="stylesheet" href="styles/style.css" media="all">
-    <link rel="stylesheet" href="styles/differentDevices.css">
+    <link rel="stylesheet" href="styles/otherDevices.css">
     <!-- MATERIAL SYMBOLS -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <!-- JAVASCRIPT -->
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    <header class="header">
-        <img src="images/logo" alt="music-log" class="logoMusicApp">
+    <header class="header"> <!-- Header Start -->
         <nav class="navigation">
             <ul class="navigationList">
                 <li class="list"><a href="#" class="headerAncor">Try</a></li>
@@ -25,32 +25,40 @@
                 <span class="material-symbols-outlined">menu</span>
             </ul>
         </nav>
+        <img src="images/logo" alt="music-log" class="logoMusicApp">
         <span class="material-symbols-outlined">search</span>
-    </header>
-    <section class="mainContainer">
-        <div class="referenceCard">
-            <h1 class="title">Top 50 Hits from our Music app</h1>
-            <div class="interactionsCard">
-                <input type="button" value="PLAY ALL" class="patternInput">
-                <span class="material-symbols-outlined">bookmarks</span>
-                <span class="material-symbols-outlined">share</span>
-                <span class="material-symbols-outlined">comment</span>
-            </div>
-            <div class="trendingCards">
-                <figure class="trendingCard">
+    </header> <!-- Header End -->
+
+    <section class="mainContainer"> <!-- Container Start -->
+        <div class="bannerCard"> <!-- BanerCard Start-->
+            <video autoplay muted loop class="bannerVideo">
+                <source src="images/backrgroundVideo.mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div> <!-- BanerCard End -->
+            <div class="interactionsCard"> <!-- InteractionsCard Start-->
+                <h1 class="title">Top 50 Hits from our Music app</h1>
+                <div class="interactionsIcons">
+                    <input type="button" value="PLAY ALL" class="patternInput">
+                    <span class="material-symbols-outlined">bookmarks</span>
+                    <span class="material-symbols-outlined">share</span>
+                    <span class="material-symbols-outlined">comment</span>
+                </div> 
+            </div> <!-- InteractionsCard End -->
+            <div class="trendingCards"> <!-- TrendingCards Start -->
+                <figure class="trendingCardFigure">
                     <img src="./images/imagineTop50.jpg" alt="" class="cardImage">
-                    <figcaption>Fig.1</figcaption>
                 </figure>
-                <figure class="trendingCard">
+                <figure class="trendingCardFigure">
                     <img src="./images/imagineTop50orange.jpg" alt="" class="cardImage">
-                    <figcaption>Fig.2</figcaption>
                 </figure>
-                <figure class="trendingCard">
+                <figure class="trendingCardFigure">
                     <img src="./images/imagineTop50red.jpg" alt="" class="cardImage">
-                    <figcaption>Fig.2</figcaption>
                 </figure>
+            </div> <!-- TrendingCards End -->
+            <div class="popularAndRecommended">
+                
             </div>
-        </div>
-    </section>
+    </section> <!-- Container End -->
 </body>
 </html>
