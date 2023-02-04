@@ -18,7 +18,6 @@
 
 <body>
     <header class="header"> <!-- Header Start -->
-        <button class="btnActionDialog">X</button>
         <nav class="navigation">
             <ul class="navigationList">
                 <li class="list"><a href="#" class="headerAncor">Try</a></li>
@@ -39,60 +38,92 @@
                 Your browser does not support the video tag.
             </video>
         </div> <!-- BanerCard End -->
-            <div class="interactionsCard"> <!-- InteractionsCard Start-->
-                <h1 class="title">Top 50 Hits from our Music app</h1>
-                <div class="interactionsIcons">
-                    <input type="button" value="PLAY ALL" class="patternInput">
-                    <span class="material-symbols-outlined">bookmarks</span>
-                    <span class="material-symbols-outlined">share</span>
-                    <span class="material-symbols-outlined">comment</span>
-                </div> 
-            </div> <!-- InteractionsCard End -->
-            <div class="trendingCards"> <!-- TrendingCards Start -->
-                <figure class="trendingCardFigure">
-                    <img src="./images/imagineTop50.jpg" alt="" class="cardImage">
-                </figure>
-                <figure class="trendingCardFigure">
-                    <img src="./images/imagineTop50orange.jpg" alt="" class="cardImage">
-                </figure>
-                <figure class="trendingCardFigure">
-                    <img src="./images/imagineTop50red.jpg" alt="" class="cardImage">
-                </figure>
-            </div> <!-- TrendingCards End -->
-            <div class="popularAndRecommended">
-                
-            </div>
-        </div>
-        <!--.Init---Dialog..-->
-        <section class="formMain">
-            <div class="form">
-                <button class="closeDialog">X</button>
-                <h1>Upload your music</h1>
-                <form method="post">
-                    <h4>Music Name</h4>
-                    <input type="Text" id="musicName" placeholder="Ex: Dj Moist" />
-                    <h4>Quick Review</h4>
-                    <input type="Text" id="musicName" placeholder="Ex: A song dedicated to my friend ..." />
-                    <h3>{Music input goes here}</h3>
-                    <h4>Add lyrics</h4>
-                    <input type="Text" id="formInputSub" placeholder="Ex: A song dedicated to my friend ..."
-                        maxlength="100" />
-                    <a style="cursor: pointer;background: red;color:aliceblue;padding: 10px;" id="LyricButton">Add
-                        subtitule</a>
-                    <div id="subs"></div>
-                </form>
-            </div>
-        </section>
-        <!--.End---Dialog..-->
-    </section>
-            <div class="popularAndRecommended"> <!-- PopularAndRecommended Start-->
-                <div class="popularAndRecommendedCards">
-                    <div class="cardPopularAndRecommended">
+        <div class="interactionsCard"> <!-- InteractionsCard Start-->
+            <h1 class="title">Top 50 Hits from our Music app</h1>
+            <div class="interactionsIcons">
+                <input type="button" value="UPLOAD" class="patternInput btnActionDialog">
+                <span class="material-symbols-outlined">bookmarks</span>
+                <span class="material-symbols-outlined">share</span>
+                <span class="material-symbols-outlined">comment</span>
+            </div> 
+        </div> <!-- InteractionsCard End -->
+        <div class="trendingCards"> <!-- TrendingCards Start -->
+            <figure class="trendingCardFigure">
+                <img src="./images/imageTop50red.jpg" alt="" class="cardImage">
+            </figure>
+            <figure class="trendingCardFigure">
+                <img src="./images/imageTop50red.jpg" alt="" class="cardImage">
+            </figure>
+            <figure class="trendingCardFigure">
+                <img src="./images/imageTop50red.jpg" alt="" class="cardImage">
+            </figure>
+        </div> <!-- TrendingCards End -->
+        <div class="popularAndRecommended"> <!-- PopularAndRecommended Start-->
+            <h2 class="legendCard">Most popular this week</h2>
+            <div class="cardPopularAndRecommended">
+                <figure class="albumCard">
+                    <div class="albumImageCard">
                         <span class="material-symbols-outlined">favorite</span>
+                        <img src="images/imageAlbum01.webp" alt="" class="albumImage">
                     </div>
-                </div>
-            </div> <!-- PopularAndRecommended End-->
-    </section> <!-- Container End -->
-</body>
+                    <div class="albumDescription">
+                        <figcaption class="albumTitle">Lorem ipsum</figcaption>
+                        <p class="albumParagraph">Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="songSize">
+                        <span class="size">2:25</span>
+                        <span class="material-symbols-outlined">share</span>
+                    </div>
+                </figure>
+                <figure class="albumCard">
+                    <div class="albumImageCard">
+                        <span class="material-symbols-outlined">favorite</span>
+                        <img src="images/imageAlbum02.webp" alt="" class="albumImage">
+                    </div>
+                    <div class="albumDescription">
+                        <figcaption class="albumTitle">Lorem ipsum</figcaption>
+                        <p class="albumParagraph">Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="songSize">
+                        <span class="size">2:25</span>
+                        <span class="material-symbols-outlined">share</span>
+                    </div>
+                </figure>
+                <figure class="albumCard">
+                    <div class="albumImageCard">
+                        <span class="material-symbols-outlined">favorite</span>
+                        <img src="images/imageAlbum03.webp" alt="" class="albumImage">
+                    </div>
+                    <div class="albumDescription">
+                        <figcaption class="albumTitle">Lorem ipsum</figcaption>
+                        <p class="albumParagraph">Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="songSize">
+                        <span class="size">2:25</span>
+                        <span class="material-symbols-outlined">share</span>
+                    </div>
+                </figure>
+            </div>
+        </div> <!-- PopularAndRecommended End-->
+</section> <!-- Container End -->
 
+<section class="formMain"> <!-- Init Dialog -->
+        <div class="form">
+            <button class="closeDialog">X</button>
+            <h1>Upload your music</h1>
+            <form method="post">
+                <h4>Music Name</h4>
+                <input type="Text" id="musicName" placeholder="Ex: Dj Moist" />
+                <h4>Quick Review</h4>
+                <input type="Text" id="musicName" placeholder="Ex: A song dedicated to my friend ..." />
+                <h3>{Music input goes here}</h3>
+                <h4>Add lyrics</h4>
+                <input type="Text" id="formInputSub" placeholder="Ex: A song dedicated to my friend ..." maxlength="100"/>
+                <a style="cursor: pointer;background: red;color:aliceblue;padding: 10px;">Add subtitule</a>
+                <div id="subs"></div>
+            </form>
+        </div>
+</section>  <!-- End Dialog -->
+
+</body>
 </html>
