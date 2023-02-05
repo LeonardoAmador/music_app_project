@@ -41,7 +41,7 @@
         <div class="interactionsCard"> <!-- InteractionsCard Start-->
             <h1 class="title">Top 50 Hits from our Music app</h1>
             <div class="interactionsIcons">
-                <input type="button" value="UPLOAD" class="patternInput btnActionDialog">
+                <input type="button" value="UPLOAD" id="btnActionDialog" class="patternInput">
                 <span class="material-symbols-outlined">bookmarks</span>
                 <span class="material-symbols-outlined">share</span>
                 <span class="material-symbols-outlined">comment</span>
@@ -61,38 +61,15 @@
         <div class="popularAndRecommended"> <!-- PopularAndRecommended Start-->
             <h2 class="legendCard">Most popular this week</h2>
             <div class="cardPopularAndRecommended">
-                <figure class="albumCard">
-                    <div class="albumImageCard">
-                        <span class="material-symbols-outlined">favorite</span>
-                        <img src="images/imageAlbum01.webp" alt="" class="albumImage">
-                    </div>
-                    <div class="albumDescription">
-                        <figcaption class="albumTitle">Lorem ipsum</figcaption>
-                        <p class="albumParagraph">Lorem ipsum dolor sit amet</p>
-                    </div>
-                    <div class="songSize">
-                        <span class="size">2:25</span>
-                        <span class="material-symbols-outlined">share</span>
-                    </div>
-                </figure>
+                
+            </div>
+        
+            <h2 class="legendCard">Most Recommended</h2>
+            <div class="cardPopularAndRecommended">
                 <figure class="albumCard">
                     <div class="albumImageCard">
                         <span class="material-symbols-outlined">favorite</span>
                         <img src="images/imageAlbum02.webp" alt="" class="albumImage">
-                    </div>
-                    <div class="albumDescription">
-                        <figcaption class="albumTitle">Lorem ipsum</figcaption>
-                        <p class="albumParagraph">Lorem ipsum dolor sit amet</p>
-                    </div>
-                    <div class="songSize">
-                        <span class="size">2:25</span>
-                        <span class="material-symbols-outlined">share</span>
-                    </div>
-                </figure>
-                <figure class="albumCard">
-                    <div class="albumImageCard">
-                        <span class="material-symbols-outlined">favorite</span>
-                        <img src="images/imageAlbum03.webp" alt="" class="albumImage">
                     </div>
                     <div class="albumDescription">
                         <figcaption class="albumTitle">Lorem ipsum</figcaption>
@@ -119,7 +96,7 @@
                 <h3>{Music input goes here}</h3>
                 <h4>Add lyrics</h4>
                 <input type="Text" id="formInputSub" placeholder="Ex: A song dedicated to my friend ..." maxlength="100"/>
-                <a style="cursor: pointer;background: red;color:aliceblue;padding: 10px;">Add subtitule</a>
+                <a style="cursor: pointer;background: red;color:aliceblue;padding: 10px;" id="LyricButton">Add subtitule</a>
                 <div id="subs"></div>
             </form>
         </div>
