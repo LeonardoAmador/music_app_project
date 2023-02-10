@@ -85,18 +85,23 @@
 </section> <!-- Container End -->
 
 <section class="formMain"> <!-- Init Dialog -->
+        <button class="closeDialog">X</button>
         <div class="form">
-            <button class="closeDialog">X</button>
+            
             <h1>Upload your music</h1>
             <form method="post">
-                <h4>Music Name</h4>
-                <input type="Text" id="musicName" placeholder="Ex: Dj Moist" />
-                <h4>Quick Review</h4>
-                <input type="Text" id="musicName" placeholder="Ex: A song dedicated to my friend ..." />
-                <h3>{Music input goes here}</h3>
-                <h4>Add lyrics</h4>
-                <input type="Text" id="formInputSub" placeholder="Ex: A song dedicated to my friend ..." maxlength="100"/>
-                <a style="cursor: pointer;background: red;color:aliceblue;padding: 10px;" id="LyricButton">Add subtitule</a>
+                <label for="musicName">Music Name</label>
+                <input type="text" id="musicName" placeholder="Ex: Dj Moist" required/>
+
+                <label for="quickReview">Quick Review</label>
+                <input type="text" id="quickReview" placeholder="Ex: A song dedicated to my friend ..." required/>
+
+                <label for="uploadMusic">Tap here to upload your</label>
+                <input type="file" name="uploadMusic" id="uploadMusic">
+
+                <label for="formInputSub">Add lyrics</label>
+                <input type="text" id="formInputSub" placeholder="Ex: A song dedicated to my friend ..." maxlength="100"/>
+                <input type="button" value="Add Subtitle" id="LyricButton">
                 <div id="subs"></div>
             </form>
         </div>

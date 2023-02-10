@@ -214,68 +214,116 @@
 .albumCard > .songSize > .size {font: 1.2em normal var(--secondPatternFont);}
 
 .formMain {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background: black;
+    background: var(--secondaryBgColor);
     opacity: 90%;
-    position: absolute;
-    top: 1px;
-    z-index: 10;
-    padding: 50px;
-    animation: scaleTrans 0.3s ease-in;
+
     display: none;
     position: fixed;
-}
-
-.formMain > .form {
-    height: 100vh;
-    background: #f6f9fd;
-    max-width: 800px;
-    margin: auto;
+    top: 1px;
     padding: 50px;
-    overflow-y: scroll;
+    overflow: scroll;
+    animation: scaleTrans 0.3s ease-in;    
 }
 
-.formMain > .form > h1 {
-    font-size: 40px;
-    text-align: unset !important;
+.formMain .closeDialog {
+    border: none;
+    border-radius: 5px;
+    background-color:  rgb(183, 178, 178);
+    color: var(--actionColor);
+
+    padding: 7px;
+    margin: 5px;
 }
 
-.formMain > .form > form > h4 {
-    font-size: 18px;
-    text-align: unset !important;
-    margin: 10px 0px;
+.formMain .form {
+    background: rgb(183, 178, 178);
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 5px 10px 5px var(--secondaryBgColor); 
+    box-shadow: 0px 5px 10px 10px var(--secondaryBgColor);
+
+    max-width: 800px;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
 }
 
-.formMain > .form > form > label {
-    color: #f6f9fd;
-    width: 100%;
+.formMain .form  h1 {
+    font: 1.7em var(--firstPatternFont);
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .formMain > .form > form {
-    display: block;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.formMain > .form > form > label {
+    background-color: rgba(0, 0, 0, 0.54);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: white;
+    font: 1.3em normal var(--secondPatternFont);
+    text-transform: capitalize;
+    text-shadow: 1px 1px 1px var(--playerBg);
+    margin-bottom: -5px;
+    padding: 5px;
+    
 }
 
 .formMain > .form > form > input {
-    padding: 18px 5px;
-    margin: 10px 0px;
-    outline: none;
-    border: none;
+    border: transparent;
     box-shadow: 0px 0.3px 2.2px rgba(0, 0, 0, 0.014),
         0px 0.7px 5.3px rgba(0, 0, 0, 0.02), 0px 1.3px 10px rgba(0, 0, 0, 0.025),
         0px 2.2px 17.9px rgba(0, 0, 0, 0.03), 0px 4.2px 33.4px rgba(0, 0, 0, 0.036),
         0px 10px 80px rgba(0, 0, 0, 0.05);
+    outline: none;
+
     width: 100%;
-    transition: 0.3s;
+    height: 35px;
+    margin-bottom: 20px;
+    padding: 5px;
+    transition: 0.5s;
+}
+
+input[type="file"] {
+    border: none !important;
+    background-color: white;
 }
 
 .formMain > .form > form > input:focus {
-    border-color: var(--actionColor);
-    background: white;
+    border: 2px solid var(--actionColor);
     box-shadow: 0px 0.3px 2.2px rgba(0, 0, 0, 0.065),
         0px 0.7px 5.3px rgba(0, 0, 0, 0.093), 0px 1.3px 10px rgba(0, 0, 0, 0.115),
         0px 2.2px 17.9px rgba(0, 0, 0, 0.137), 0px 4.2px 33.4px rgba(0, 0, 0, 0.165),
         0px 10px 80px rgba(0, 0, 0, 0.23);
+}
+
+.formMain > .form > form > input[type="button"] {
+    height: 40px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.54);
+    border-radius: 20px;
+    font: 1.5em normal var(--secondPatternFont);
+    text-shadow: 1px 1px 1px var(--playerBg);
+}
+
+.formMain > .form > form > input[type="button"]:active,
+.formMain > .form > form > input[type="button"]:hover {
+    background-color: var(--actionColor);
+    box-shadow: 1px 1px 5px var(--secondaryBgColor);
+    border-color: transparent;
+    transition: .5s;
 }
 
 .chip_list {
