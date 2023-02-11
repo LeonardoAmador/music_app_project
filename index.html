@@ -1,109 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <title>Fuck Music</title>
     <!-- STYLES -->
-    <link rel="stylesheet" href="styles/style.css" media="all">
-    <link rel="stylesheet" href="styles/otherDevices.css">
+    <link rel="stylesheet" href="styles/style.css" media="all" />
+    <link rel="stylesheet" href="styles/otherDevices.css" />
     <!-- MATERIAL SYMBOLS -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
     <!-- JAVASCRIPT -->
     <script src="js/script.js" defer></script>
-</head>
+  </head>
 
-<body>
-    <header class="header"> <!-- Header Start -->
-        <nav class="navigation">
-            <ul class="navigationList">
-                <li class="list"><a href="#" class="headerAncor">Try</a></li>
-                <li class="list"><a href="#" class="headerAncor">Try</a></li>
-                <li class="list"><a href="#" class="headerAncor">Try</a></li>
-                <li class="list"><a href="#" class="headerAncor">Try</a></li>
-                <span class="material-symbols-outlined">menu</span>
-            </ul>
-        </nav>
-        <img src="images/logo" alt="music-log" class="logoMusicApp">
-        <span class="material-symbols-outlined">search</span>
-    </header> <!-- Header End -->
+  <body>
+    <header class="header">
+      <!-- Header Start -->
+      <nav class="navigation">
+        <ul class="navigationList">
+          <li class="list"><a href="#" class="headerAncor">Try</a></li>
+          <li class="list"><a href="#" class="headerAncor">Try</a></li>
+          <li class="list"><a href="#" class="headerAncor">Try</a></li>
+          <li class="list"><a href="#" class="headerAncor">Try</a></li>
+          <span class="material-symbols-outlined">menu</span>
+        </ul>
+      </nav>
+      <img src="images/logo" alt="music-log" class="logoMusicApp" />
+      <span class="material-symbols-outlined">search</span>
+    </header>
+    <!-- Header End -->
 
-    <section class="mainContainer"> <!-- Container Start -->
-        <div class="bannerCard"> <!-- BanerCard Start-->
-            <video autoplay muted loop class="bannerVideo">
-                <source src="images/backrgroundVideo.mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div> <!-- BanerCard End -->
-        <div class="interactionsCard"> <!-- InteractionsCard Start-->
-            <h1 class="title">Top 50 Hits from our Music app</h1>
-            <div class="interactionsIcons">
-                <input type="button" value="UPLOAD" id="btnActionDialog" class="patternInput">
-                <span class="material-symbols-outlined">bookmarks</span>
-                <span class="material-symbols-outlined">share</span>
-                <span class="material-symbols-outlined">comment</span>
-            </div> 
-        </div> <!-- InteractionsCard End -->
-        <div class="trendingCards"> <!-- TrendingCards Start -->
-            <figure class="trendingCardFigure">
-                <img src="./images/imageTop50red.jpg" alt="" class="cardImage">
-            </figure>
-            <figure class="trendingCardFigure">
-                <img src="./images/imageTop50red.jpg" alt="" class="cardImage">
-            </figure>
-            <figure class="trendingCardFigure">
-                <img src="./images/imageTop50red.jpg" alt="" class="cardImage">
-            </figure>
-        </div> <!-- TrendingCards End -->
-        <div class="popularAndRecommended"> <!-- PopularAndRecommended Start-->
-            <h2 class="legendCard">Most popular this week</h2>
-            <div class="cardPopularAndRecommended">
-                
-            </div>
-        
-            <h2 class="legendCard">Most Recommended</h2>
-            <div class="cardPopularAndRecommended">
-                <figure class="albumCard">
-                    <div class="albumImageCard">
-                        <span class="material-symbols-outlined">favorite</span>
-                        <img src="images/imageAlbum02.webp" alt="" class="albumImage">
-                    </div>
-                    <div class="albumDescription">
-                        <figcaption class="albumTitle">Lorem ipsum</figcaption>
-                        <p class="albumParagraph">Lorem ipsum dolor sit amet</p>
-                    </div>
-                    <div class="songSize">
-                        <span class="size">2:25</span>
-                        <span class="material-symbols-outlined">share</span>
-                    </div>
-                </figure>
-            </div>
-        </div> <!-- PopularAndRecommended End-->
-</section> <!-- Container End -->
-
-<section class="formMain"> <!-- Init Dialog -->
-        <div class="form">
-            <button class="closeDialog">X</button>
-            <h1>Upload your music</h1>
-            <form>
-                <h1>Music Name</h1>
-                <input type="Text" id="musicName" placeholder="Ex: Dj Moist" name="name"/>
-                <h1>Quick Review</h1>
-                <input type="Text" id="musicDescription" placeholder="Ex: A song dedicated to my friend ..." name="description"/>
-                <div style="margin: 50px 0px;" id="afterChange"><label for="music_input" class="input_upload">Upload your music</label></div>
-                <input type="file" id="music_input" style="display:none"  accept="audio/mp3" name="music_file"/>
-                <div id="afterChange"></div>
-                <h1>Add lyrics</h1>
-                <input type="Text" id="formInputSub" placeholder="Ex: A song dedicated to my friend ..." maxlength="100"/>
-                <input type="submit" value="Upload" id="submitForm" style="display: none;"/>
-                <div style="margin: 10px 0px;"><a class="input_upload" id="LyricButton">Add subtitule</a></div>
-                <div id="subs"></div>
-            </form>
+    <section class="mainContainer">
+      <!-- Container Start -->
+      <div class="bannerCard">
+        <!-- BanerCard Start-->
+        <video autoplay muted loop class="bannerVideo">
+          <source src="images/backrgroundVideo.mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <!-- BanerCard End -->
+      <div class="interactionsCard">
+        <!-- InteractionsCard Start-->
+        <h1 class="title">Top 50 Hits from our Music app</h1>
+        <div class="interactionsIcons">
+          <input
+            type="button"
+            value="UPLOAD"
+            id="btnActionDialog"
+            class="patternInput"
+          />
+          <span class="material-symbols-outlined">bookmarks</span>
+          <span class="material-symbols-outlined">share</span>
+          <span class="material-symbols-outlined">comment</span>
         </div>
-</section>  <!-- End Dialog -->
+      </div>
+      <!-- InteractionsCard End -->
+      <div class="trendingCards">
+        <!-- TrendingCards Start -->
+        <figure class="trendingCardFigure">
+          <img src="./images/imageTop50red.jpg" alt="" class="cardImage" />
+        </figure>
+        <figure class="trendingCardFigure">
+          <img src="./images/imageTop50red.jpg" alt="" class="cardImage" />
+        </figure>
+        <figure class="trendingCardFigure">
+          <img src="./images/imageTop50red.jpg" alt="" class="cardImage" />
+        </figure>
+      </div>
+      <!-- TrendingCards End -->
+      <div class="popularAndRecommended">
+        <!-- PopularAndRecommended Start-->
+        <h2 class="legendCard">Most popular this week</h2>
+        <div class="cardPopularAndRecommended"></div>
 
-</body>
+        <h2 class="legendCard">Most Recommended</h2>
+        <div class="cardPopularAndRecommended">
+          <figure class="albumCard">
+            <div class="albumImageCard">
+              <span class="material-symbols-outlined">favorite</span>
+              <img src="images/imageAlbum02.webp" alt="" class="albumImage" />
+            </div>
+            <div class="albumDescription">
+              <figcaption class="albumTitle">Lorem ipsum</figcaption>
+              <p class="albumParagraph">Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="songSize">
+              <span class="size">2:25</span>
+              <span class="material-symbols-outlined">share</span>
+            </div>
+          </figure>
+        </div>
+      </div>
+      <!-- PopularAndRecommended End-->
+    </section>
+    <!-- Container End -->
+
+    <section class="formMain">
+      <!-- Init Dialog -->
+      <div class="form">
+        <button class="closeDialog">X</button>
+        <h1>Upload your music</h1>
+        <form>
+          <h1>Music Name</h1>
+          <input
+            type="Text"
+            id="musicName"
+            placeholder="Ex: Dj Moist"
+            name="name"
+          />
+          <h1>Quick Review</h1>
+          <input
+            type="Text"
+            id="musicDescription"
+            placeholder="Ex: A song dedicated to my friend ..."
+            name="description"
+          />
+          <div style="margin: 50px 0px" id="afterChange">
+            <label for="music_input" class="input_upload"
+              >Upload your music</label
+            >
+          </div>
+          <input
+            type="file"
+            id="music_input"
+            style="display: none"
+            accept="audio/mp3"
+            name="music_file"
+            required
+          />
+          <div style="margin: 50px 0px" id="afterChangeImage">
+            <label for="image_file" class="input_upload"
+              >Upload your image</label
+            >
+          </div>
+          <input
+            type="file"
+            id="image_file"
+            style="display: none"
+            accept="image/*"
+            name="image_file"
+            required
+          />
+          <div id="afterChange"></div>
+          <h1>Add lyrics</h1>
+          <input
+            type="Text"
+            id="formInputSub"
+            placeholder="Ex: A song dedicated to my friend ..."
+            maxlength="100"
+          />
+          <input
+            type="submit"
+            value="Upload"
+            id="submitForm"
+            style="display: none"
+          />
+          <div style="margin: 10px 0px">
+            <a class="input_upload" id="LyricButton">Add subtitule</a>
+          </div>
+          <div id="subs"></div>
+        </form>
+      </div>
+    </section>
+    <!-- End Dialog -->
+
+    <!-- Init PlayerMusic -->
+    <div id="mainPlayerMusic"></div>
+    <!-- End PlayerMusic -->
+  </body>
 </html>

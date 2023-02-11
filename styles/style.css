@@ -517,3 +517,32 @@ input[type="file"] {
   }
 }
 
+
+.navPlayerMusic {
+  background: var(--playerBg);
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+.navPlayerMusic .progressBar {
+  background: var(--actionColor);
+  width: 0%;
+  height: 5px;
+}
+.musicInfos {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.musicInfos  > .infos{
+  color: #fff;
+}
+.playerButton{
+  padding: 10px;
+}
+.playerButton span{
+  background: #e8265c;
+  border-radius: 50%;
+  padding: 10px;
+}
