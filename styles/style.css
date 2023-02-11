@@ -312,6 +312,203 @@
     box-shadow: 1px 1px 5px var(--thirdBgColor);
     color: var(--fisrtFontColor);
     padding: 10px;
+    gap: 20px;
+}
+
+.trendingCardFigure  {
+    max-height: 200px;
+    display: flex;
+    flex: 1 0 auto;
+}
+
+.trendingCardFigure > .cardImage {
+    width: 100%;
+    -webkit-box-shadow: 2px 5px 17px 5px rgba(0,0,0,0.75); 
+    box-shadow: 2px 5px 17px 5px rgba(0,0,0,0.75);
+    border-radius: 20px;
+}
+
+.popularAndRecommended {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding: 5px;
+    margin: 20px 0px;
+    gap: 10px;
+}
+
+.popularAndRecommended > .legendCard {
+    color: var(--fisrtFontColor);
+    font: 2em normal var(--secondPatternFont);
+}
+
+.popularAndRecommended > .cardPopularAndRecommended {
+    background-color: var(--thirdBgColor);
+    padding: 2px 5px;
+}
+
+.popularAndRecommended > .cardPopularAndRecommended > .albumCard {
+    color: var(--secondFontColor);
+    border-bottom: 2px solid var(--secondFontColor);
+    display: flex;
+    align-items: center;
+}
+
+.albumCard > .albumImageCard {
+    display: flex;
+    flex: 0 1 100px;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+}
+
+.albumCard > .albumImageCard > .albumImage {
+    width: 50%;
+    border-radius: 3px;
+}
+
+.albumCard > .albumImageCard > .material-symbols-outlined, 
+.songSize > .material-symbols-outlined {
+    color: var(--actionColor); 
+    font-size: 2em;
+}
+
+.albumCard > .albumDescription {
+    color: var(--fisrtFontColor);
+    font: 1em normal var(--secondPatternFont);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1 1 100px;
+}
+
+.albumCard > .songSize {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.albumCard > .songSize > .size {font: 1.2em normal var(--secondPatternFont);}
+
+.formMain {
+    width: 100vw;
+    height: 100vh;
+    background: var(--secondaryBgColor);
+    opacity: 90%;
+
+    display: none;
+    position: fixed;
+    top: 1px;
+    padding: 50px;
+    overflow: scroll;
+    animation: scaleTrans 0.3s ease-in;    
+}
+
+.formMain .closeDialog {
+    border: none;
+    border-radius: 5px;
+    background-color:  rgb(183, 178, 178);
+    color: var(--actionColor);
+
+    padding: 7px;
+    margin: 5px;
+}
+
+.formMain .form {
+    background: rgb(183, 178, 178);
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 5px 10px 5px var(--secondaryBgColor); 
+    box-shadow: 0px 5px 10px 10px var(--secondaryBgColor);
+
+    max-width: 800px;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+}
+
+.formMain .form  h1 {
+    font: 1.7em var(--firstPatternFont);
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formMain > .form > form {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.formMain > .form > form > label {
+    background-color: rgba(0, 0, 0, 0.54);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: white;
+    font: 1.3em normal var(--secondPatternFont);
+    text-transform: capitalize;
+    text-shadow: 1px 1px 1px var(--playerBg);
+    margin-bottom: -5px;
+    padding: 5px;
+    
+}
+
+.formMain > .form > form > input {
+    border: transparent;
+    box-shadow: 0px 0.3px 2.2px rgba(0, 0, 0, 0.014),
+        0px 0.7px 5.3px rgba(0, 0, 0, 0.02), 0px 1.3px 10px rgba(0, 0, 0, 0.025),
+        0px 2.2px 17.9px rgba(0, 0, 0, 0.03), 0px 4.2px 33.4px rgba(0, 0, 0, 0.036),
+        0px 10px 80px rgba(0, 0, 0, 0.05);
+    outline: none;
+
+    width: 100%;
+    height: 35px;
+    margin-bottom: 20px;
+    padding: 5px;
+    transition: 0.5s;
+}
+
+input[type="file"] {
+    border: none !important;
+    background-color: white;
+}
+
+.formMain > .form > form > input:focus {
+    border: 2px solid var(--actionColor);
+    box-shadow: 0px 0.3px 2.2px rgba(0, 0, 0, 0.065),
+        0px 0.7px 5.3px rgba(0, 0, 0, 0.093), 0px 1.3px 10px rgba(0, 0, 0, 0.115),
+        0px 2.2px 17.9px rgba(0, 0, 0, 0.137), 0px 4.2px 33.4px rgba(0, 0, 0, 0.165),
+        0px 10px 80px rgba(0, 0, 0, 0.23);
+}
+
+.formMain > .form > form > input[type="button"] {
+    height: 40px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.54);
+    border-radius: 20px;
+    font: 1.5em normal var(--secondPatternFont);
+    text-shadow: 1px 1px 1px var(--playerBg);
+}
+
+.formMain > .form > form > input[type="button"]:active,
+.formMain > .form > form > input[type="button"]:hover {
+    background-color: var(--actionColor);
+    box-shadow: 1px 1px 5px var(--secondaryBgColor);
+    border-color: transparent;
+    transition: .5s;
+}
+
+.chip_list {
+    padding: 5px;
+    background: #e8265c;
+    color: #ffffff;
+    width: 100%;
 }
 
 @keyframes scaleTrans {

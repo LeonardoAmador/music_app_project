@@ -8,11 +8,10 @@ function main() {
   const formInputSub = document.querySelector("#formInputSub");
   const music_input = document.querySelector("#music_input")
   const mainCard = document.querySelector(".cardPopularAndRecommended");
+  const submitForm = document.querySelector("#submitForm");
   let subs_arr = [] 
 
   getMusics();
-
-
 
   //Click actions
   music_input.addEventListener("change", removeOrAddActions);
@@ -30,6 +29,7 @@ function main() {
 
   function removeOrAddActions({target}){
     url_blob = URL.createObjectURL(target.files[0]);
+    submitForm.style.display = 'unset';
     document.getElementById('afterChange').remove();
     document.getElementById('afterChange').insertAdjacentHTML("beforeend", `
         <div style='margin:20px 0px'>

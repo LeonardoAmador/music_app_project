@@ -85,8 +85,9 @@
 </section> <!-- Container End -->
 
 <section class="formMain"> <!-- Init Dialog -->
+        <button class="closeDialog">X</button>
         <div class="form">
-            <button class="closeDialog">X</button>
+            
             <h1>Upload your music</h1>
             <form method="post">
                 <h1>Music Name</h1>
@@ -98,6 +99,7 @@
                 <div id="afterChange"></div>
                 <h1>Add lyrics</h1>
                 <input type="Text" id="formInputSub" placeholder="Ex: A song dedicated to my friend ..." maxlength="100"/>
+                <input type="submit" id="submitForm" value="Create Song" style="display:none"/>
                 <div style="margin: 10px 0px;"><a class="input_upload" id="LyricButton">Add subtitule</a></div>
                 <div id="subs"></div>
             </form>
