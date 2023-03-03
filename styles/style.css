@@ -519,6 +519,7 @@ input[type="file"] {
 
 
 .navPlayerMusic {
+  z-index: 3;
   background: var(--playerBg);
   position: fixed;
   bottom: 0px;
@@ -546,3 +547,31 @@ input[type="file"] {
   border-radius: 50%;
   padding: 10px;
 }
+
+.mainSub {
+  top: 10%;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  color: var(--actionColor);
+  padding: 30px;
+  align-items: center;
+  background: var(--firstBgColor);
+  z-index: 1;
+}
+.mainSub p {
+  opacity: 100%;
+  width: 100%;
+  font-size: 22px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+}
+

@@ -1,5 +1,6 @@
 const HOST = "http://127.0.0.1:3000/v1/";
 let audioPlaying = false;
+let subtitles = null;
 function main() {
   const btnDialog = document.querySelector("#btnActionDialog");
   const dialogBox = document.querySelector(".formMain");
@@ -12,6 +13,7 @@ function main() {
   const form = document.querySelector("form");
   const image_file = document.querySelector("#image_file");
   const mainPlayerMusic = document.querySelector("#mainPlayerMusic");
+  const mainPlayerMusicSub = document.querySelector('#mainPlayerMusicSub');
   let subs_arr = [];
   let music_duration = 0;
 
@@ -129,28 +131,32 @@ function main() {
 }
 
 main();
-
 //Out Functions
 async function actionPlayOrPause(currentMusicId) {
-  if(document.querySelector('#navPlayerMusic')){
-    document.querySelector('#navPlayerMusic').remove();
+  if (document.querySelector("#navPlayerMusic")) {
+    document.querySelector("#navPlayerMusic").remove();
   }
   const response = await fetch(`${HOST}musics/${currentMusicId}`);
   let albumCard = await response.json();
+  subtitles = albumCard['user_music'].subs_payload
   mainPlayerMusic.insertAdjacentHTML(
     "beforeend",
     `
   <div class="navPlayerMusic" id="navPlayerMusic">
     <audio controls id="audio_player" style="display:none">
-        <source src="${albumCard['user_music'].music_url}">
+        <source src="${albumCard["user_music"].music_url}">
     </audio>
     <div class="progressBar" id='progressBar'></div>
       <div class="musicInfos">
         <div class="infos">
-          <img src="${albumCard['user_music']['image_url']}" style="width:30px"/>
+          <img src="${albumCard["user_music"]["image_url"]}" style="width:30px"/>
             <h4>${albumCard["user_music"].name}</h4>
-            <p>${albumCard["user_music"].song_size}</p>
+            <p>${albumCard['user_music'].song_size}</p>
         </div>
+
+        <span class="material-symbols-outlined" onclick='subTitleDialog()'>
+            ${albumCard['user_music'].has_sub  ? 'subtitles' : ''}
+        </span>
         <div class="playerButton" onclick='playMusic()'>
           <span class="material-symbols-outlined" id="togglePlayer"> play_arrow </span>
         </div>
@@ -159,23 +165,46 @@ async function actionPlayOrPause(currentMusicId) {
   );
 }
 
-function playMusic(){
-  if(document.querySelector('#audio_player')){
-    const progressBar = document.querySelector('#progressBar')
-    progressBar.style.width = "0px";
-    player = document.querySelector('#audio_player')
 
-    player.addEventListener('timeupdate', function() {
-      let audioPorcentage =  (player.currentTime / player.duration) * 100;
-      progressBar.style.width = `${audioPorcentage.toFixed(2)}%`
+function subTitleDialog(){
+  if (document.querySelector("#audio_player")) {
+    if(mainPlayerMusicSub) mainPlayerMusicSub.insertAdjacentHTML("beforeend", `
+    <div class="mainSub">
+        <p  id='subHandler'></p>
+    </div>
+    `);
+    const progressBar = document.querySelector("#progressBar");
+    progressBar.style.width = "0px";
+    player = document.querySelector("#audio_player");
+    player.addEventListener("timeupdate", function () {
+    sub = getSubs(player.currentTime, subtitles)
+    document.querySelector('#subHandler').innerText = sub ? sub.sub_text : ''
+    });
+  }
+}
+
+function getSubs(currentTime, subtitle){
+arr = subtitle.filter(value => value.time <= (currentTime + 1.000000));
+return arr[arr.length - 1];
+}
+
+function playMusic() {
+  if (document.querySelector("#audio_player")) {
+    const progressBar = document.querySelector("#progressBar");
+    progressBar.style.width = "0px";
+    player = document.querySelector("#audio_player");
+
+    player.addEventListener("timeupdate", function () {
+      let audioPorcentage = (player.currentTime / player.duration) * 100;
+      progressBar.style.width = `${audioPorcentage.toFixed(2)}%`;
     });
 
-    if(!audioPlaying){
-      document.querySelector('#togglePlayer').innerText = 'pause' 
+    if (!audioPlaying) {
+      document.querySelector("#togglePlayer").innerText = "pause";
       player.play();
       audioPlaying = true;
-    }else {
-      document.querySelector('#togglePlayer').innerText = 'play_arrow'
+    } else {
+      document.querySelector("#togglePlayer").innerText = "play_arrow";
       player.pause();
       audioPlaying = false;
     }
